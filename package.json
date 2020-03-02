@@ -1,0 +1,36 @@
+{
+  "name": "API",
+  "version": "0.0.1",
+  "description": "Created by IAGO",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "production": "pm2 start index.js --name API_IAGO"
+  },
+  "repository": "https://github.com/iagobontempo/node-js-api.git",
+  "author": "Iago Bontempo <iagobontempo@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jwt-simple": "^0.5.6",
+    "mariadb": "^2.1.5",
+    "moment": "^2.24.0",
+    "mysql2": "^2.1.0",
+    "next": "^9.2.2",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "pg": "^7.18.1",
+    "pg-hstore": "^2.3.3",
+    "pm2": "^4.2.3",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "sequelize": "^5.21.3"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^5.5.1"
+  }
+}

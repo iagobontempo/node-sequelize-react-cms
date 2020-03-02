@@ -1,0 +1,19 @@
+const path = require('path');
+
+module.exports = {
+    config: path.resolve(__dirname, 'config', 'dbConfig.js'), // Caminho para achar as configurações da DB
+    'migrations-path': path.resolve(__dirname, 'database', 'migrations'), // Caminho de onde será feito as migrations
+    'seeders-path': path.resolve(__dirname, 'database', 'seeds') // Caminho de onde pode colocar dummy data
+}
+
+// Para criar a DB rode:
+// yarn sequelize db:create
+
+// Para criar a migration:
+// yarn sequelize migration:create --name=create-table-users
+
+// Para rodar migration:
+// yarn sequelize db:migrate
+
+// Para desfazer ultima migration feita:
+// yarn sequelize db:migrate:undo
