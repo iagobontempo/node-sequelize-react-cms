@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 
 
 module.exports = app => {
-    const { existsOrError, notExistsOrError, equalsOrError } = app.library.validation;
+    const { existsOrError, notExistsOrError, equalsOrError } = app.api.library.validation;
 
     const encryptPassword = password => {
         const salt = bcrypt.genSaltSync(10);

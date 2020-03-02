@@ -1,7 +1,7 @@
 const DevConfig = require('../models/DevConfig.js');
 
 module.exports = app => {
-    const { existsOrError, notExistsOrError } = app.library.validation;
+    const { existsOrError, notExistsOrError } = app.api.library.validation;
 
     function save(req, res) {
         const config = { ...req.body };

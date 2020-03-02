@@ -1,7 +1,7 @@
 const Field = require('../models/Field.js');
 
 module.exports = app => {
-    const { existsOrError } = app.library.validation;
+    const { existsOrError } = app.api.library.validation;
 
     function save(req, res) {
         const field = { ...req.body };

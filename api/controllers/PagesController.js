@@ -2,7 +2,7 @@ const Page = require('../models/Page.js');
 const InternalPage = require('../models/InternalPage.js');
 
 module.exports = app => {
-    const { existsOrError, notExistsOrError } = app.library.validation;
+    const { existsOrError, notExistsOrError } = app.api.library.validation;
 
     function save(req, res) {
         const page = { ...req.body };

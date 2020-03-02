@@ -3,7 +3,7 @@ const dev = process.env.NODE_ENV !== "production";
 const app = require('express')();
 const next = require('next')({ dev });
 const consign = require('consign');
-const db = require('./database/index.js');
+const db = require('./api/database/index.js');
 
 
 app.db = db;
@@ -15,10 +15,10 @@ next.prepare().then(() => {
 
 
     consign()
-        .include('./library/passport.js')
+        .include('./api/library/passport.js')
         .then('./config/middlewares.js')
-        .then('./library')
-        .then('./controllers')
+        .then('./api/library')
+        .then('./api/controllers')
         .then('./config/routes.js')
         .into(app)
 
